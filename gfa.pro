@@ -17,6 +17,8 @@ HEADERS += gfa.h\
         gfa_global.h
 
 unix {
-    target.path = /usr/lib
-    INSTALLS += target
+    target.path = $$PWD/../inst/gfa/lib
+    headers.path = $$PWD/../inst/gfa/include
+    headers.files = *.h
+    INSTALLS += target headers
 }

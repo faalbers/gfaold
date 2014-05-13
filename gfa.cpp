@@ -1,6 +1,6 @@
 #include "gfa.h"
 
 
-Gfa::Gfa()
+GFA::Gfa::Gfa()
 {
 }
