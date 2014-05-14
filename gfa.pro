@@ -23,9 +23,10 @@ unix {
     INSTALLS += target headers
 }
 
-win64 {
+win32 {
     target.path = $$PWD/../inst/gfa/lib
     headers.path = $$PWD/../inst/gfa/include
     headers.files = *.h
     INSTALLS += target headers
 }
+
