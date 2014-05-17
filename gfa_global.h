@@ -1,5 +1,5 @@
-#ifndef GFA_GLOBAL_H
-#define GFA_GLOBAL_H
+#ifndef GFA_GFA_GLOBAL_H
+#define GFA_GFA_GLOBAL_H
 
 #include <QtCore/qglobal.h>
 
@@ -20,4 +20,4 @@ const Scalar PI             = 3.14159265359;
 const Scalar invPI          = 1.0 / PI;
 }
 
-#endif // GFA_GLOBAL_H
+#endif // GFA_GFA_GLOBAL_H

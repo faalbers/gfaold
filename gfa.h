@@ -1,5 +1,5 @@
-#ifndef GFA_H
-#define GFA_H
+#ifndef GFA_GFA_H
+#define GFA_GFA_H
 
 #include "gfa_global.h"
 
@@ -12,4 +12,4 @@ public:
 };
 }
 
-#endif // GFA_H
+#endif // GFA_GFA_H
