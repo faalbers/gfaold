@@ -16,6 +16,8 @@ SOURCES += gfa.cpp
 HEADERS += gfa.h\
         gfa_global.h
 
+CONFIG += c++11
+
 unix {
     target.path = $$PWD/../inst/lib
     headers.path = $$PWD/../inst/include/gfa
