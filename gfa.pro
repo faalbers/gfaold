@@ -11,10 +11,14 @@ TEMPLATE = lib
 
 DEFINES += GFA_LIBRARY
 
-SOURCES += gfa.cpp
+SOURCES += gfa.cpp \
+    rgbcolorbuffer.cpp \
+    rgbcolor.cpp
 
 HEADERS += gfa.h\
-        gfa_global.h
+        gfa_global.h \
+    rgbcolorbuffer.h \
+    rgbcolor.h
 
 CONFIG += c++11
 
