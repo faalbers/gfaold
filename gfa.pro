@@ -24,7 +24,8 @@ HEADERS += gfa.h\
     point3d.h \
     vector3d.h
 
-CONFIG += c++11
+QMAKE_CXXFLAGS += -std=c++11
+QMAKE_CXXFLAGS += -fvisibility=hidden
 
 unix {
     target.path = $$PWD/../inst/lib
