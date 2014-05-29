@@ -13,3 +13,11 @@ GFA::Vector3D::Vector3D(const Scalar &x_, const Scalar &y_, const Scalar &z_) :
     z(z_)
 {
 }
+//==============================================================================
+void GFA::Vector3D::normalize()
+{
+    GFA::Scalar dom = 1.0 / sqrt(x*x + y*y + z*z);
+    x *= dom;
+    y *= dom;
+    z *= dom;
+}

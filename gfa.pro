@@ -15,14 +15,16 @@ SOURCES += gfa.cpp \
     rgbcolorbuffer.cpp \
     rgbcolor.cpp \
     point3d.cpp \
-    vector3d.cpp
+    vector3d.cpp \
+    point2d.cpp
 
 HEADERS += gfa.h\
         gfa_global.h \
     rgbcolorbuffer.h \
     rgbcolor.h \
     point3d.h \
-    vector3d.h
+    vector3d.h \
+    point2d.h
 
 QMAKE_CXXFLAGS += -std=c++11
 QMAKE_CXXFLAGS += -fvisibility=hidden

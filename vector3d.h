@@ -11,6 +11,9 @@ public:
     Vector3D(const Scalar &x_, const Scalar &y_, const Scalar &z_);
 
     Scalar x, y, z;
+
+    void normalize();
+
 };
 }
 #endif // GFA_VECTOR3D_H
