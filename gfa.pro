@@ -28,8 +28,8 @@ HEADERS += gfa.h\
     point2d.h \
     normal.h
 
-QMAKE_CXXFLAGS += -std=c++11
-QMAKE_CXXFLAGS += -fvisibility=hidden
+unix: QMAKE_CXXFLAGS += -std=c++11
+unix: QMAKE_CXXFLAGS += -fvisibility=hidden
 
 unix {
     target.path = $$PWD/../inst/lib
