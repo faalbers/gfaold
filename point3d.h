@@ -2,8 +2,12 @@
 #define GFA_POINT3D_H
 //==============================================================================
 #include "gfa_global.h"
+#include <iostream>
 //==============================================================================
 namespace GFA {
+
+class Vector3D;
+
 class GFASHARED_EXPORT Point3D
 {
 public:
@@ -11,7 +15,11 @@ public:
     Point3D(const Scalar &x_, const Scalar &y_, const Scalar &z_);
 
     Scalar x, y, z;
+
+    // mathmatical operators
+    Vector3D    operator-(const Point3D &rhs) const;
 };
+GFASHARED_EXPORT std::ostream & operator<< (std::ostream &os, Point3D const &rhs);
 }
 #endif // GFA_POINT3D_H
 //==============================================================================
