@@ -18,6 +18,7 @@ public:
 
     // mathmatical operators
     Vector3D    operator-(const Point3D &rhs) const;
+    Point3D     operator+(const Vector3D& rhs) const;
 };
 GFASHARED_EXPORT std::ostream & operator<< (std::ostream &os, Point3D const &rhs);
 }

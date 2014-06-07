@@ -24,6 +24,15 @@ GFA::Vector3D GFA::Point3D::operator-(const Point3D &rhs) const
     return temp;
 }
 //==============================================================================
+GFA::Point3D GFA::Point3D::operator+(const Vector3D& rhs) const
+{
+    Point3D temp;
+    temp.x = x+rhs.x;
+    temp.y = y+rhs.y;
+    temp.z = z+rhs.z;
+    return temp;
+}
+//==============================================================================
 std::ostream & GFA::operator<< (std::ostream &os, GFA::Point3D const &rhs)
 {
     os << "Point3D(" << rhs.x << ", " << rhs.y << ", " << rhs.z << ")";
