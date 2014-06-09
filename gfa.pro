@@ -28,7 +28,7 @@ HEADERS += gfa.h\
     point2d.h \
     normal.h
 
-unix: QMAKE_CXXFLAGS += -std=c++11
+unix: QMAKE_CXXFLAGS += -std=c++0x
 unix: QMAKE_CXXFLAGS += -fvisibility=hidden
 
 unix {
