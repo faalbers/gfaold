@@ -2,9 +2,11 @@
 #define GFA_NORMAL_H
 //==============================================================================
 #include "gfa_global.h"
-#include "vector3d.h"
+#include <iostream>
 //==============================================================================
 namespace GFA {
+
+class Vector3D;
 
 class GFASHARED_EXPORT Normal
 {
@@ -16,5 +18,6 @@ public:
 
     Normal & operator= (const Vector3D &rhs);
 };
+GFASHARED_EXPORT std::ostream & operator<< (std::ostream &os, const Normal &rhs);
 }
 #endif // GFA_NORMAL_H

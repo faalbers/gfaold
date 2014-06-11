@@ -5,6 +5,9 @@
 #include <iostream>
 //==============================================================================
 namespace GFA {
+
+class Normal;
+
 class GFASHARED_EXPORT Vector3D
 {
 public:
@@ -19,8 +22,9 @@ public:
     Vector3D operator+ (const Vector3D &rhs) const;
     Vector3D operator* (const Scalar &rhs) const;
     Vector3D operator/ (const Scalar &rhs) const;
-    Vector3D operator^ (const Vector3D &rhs) const; //cross product
-    GFA::Scalar operator* (const Vector3D &rhs) const; // dot product
+    Vector3D operator^ (const Vector3D &rhs) const;     // cross product
+    GFA::Scalar operator* (const Vector3D &rhs) const;  // dot product
+    GFA::Scalar operator* (const Normal &rhs) const;    // dot product
 };
 GFASHARED_EXPORT std::ostream & operator<< (std::ostream &os, const Vector3D &rhs);
 }

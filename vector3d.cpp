@@ -1,4 +1,5 @@
 #include "vector3d.h"
+#include "normal.h"
 #include <math.h>
 //==============================================================================
 GFA::Vector3D::Vector3D() :
@@ -46,6 +47,12 @@ GFA::Vector3D GFA::Vector3D::operator^ (const Vector3D& rhs) const
 //==============================================================================
 // dot product
 GFA::Scalar GFA::Vector3D::operator* (const Vector3D &rhs) const
+{
+    return x*rhs.x+y*rhs.y+z*rhs.z;
+}
+//==============================================================================
+// dot product
+GFA::Scalar GFA::Vector3D::operator* (const Normal &rhs) const
 {
     return x*rhs.x+y*rhs.y+z*rhs.z;
 }
