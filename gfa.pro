@@ -45,3 +45,6 @@ win32 {
     INSTALLS += target headers
 }
 
+OTHER_FILES += \
+    Doxyfile
+

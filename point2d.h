@@ -4,6 +4,10 @@
 #include "gfa_global.h"
 //==============================================================================
 namespace GFA {
+
+/*!
+ * \brief The Point2D class
+ */
 class GFASHARED_EXPORT Point2D
 {
 public:

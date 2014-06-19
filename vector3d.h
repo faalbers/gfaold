@@ -8,6 +8,9 @@ namespace GFA {
 
 class Normal;
 
+/*!
+ * \brief The Vector3D class
+ */
 class GFASHARED_EXPORT Vector3D
 {
 public:

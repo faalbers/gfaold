@@ -8,6 +8,9 @@ namespace GFA {
 
 class Vector3D;
 
+/*!
+ * \brief The Point3D class
+ */
 class GFASHARED_EXPORT Point3D
 {
 public:

@@ -5,6 +5,10 @@
 #include <iostream>
 //==============================================================================
 namespace GFA {
+
+/*!
+ * \brief The RGBColor class
+ */
 class GFASHARED_EXPORT RGBColor
 {
 public:

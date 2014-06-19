@@ -5,6 +5,10 @@
 #include "rgbcolor.h"
 //==============================================================================
 namespace GFA {
+
+/*!
+ * \brief The RGBColorBuffer class
+ */
 class GFASHARED_EXPORT RGBColorBuffer
 {
 public:

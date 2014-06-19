@@ -4,6 +4,10 @@
 #include "gfa_global.h"
 //==============================================================================
 namespace GFA {
+
+/*!
+ * \brief The Gfa class doesn't really do anything
+ */
 class GFASHARED_EXPORT Gfa
 {
 
