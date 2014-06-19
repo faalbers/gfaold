@@ -29,6 +29,11 @@ GFA::Vector3D GFA::Vector3D::operator+ (const Vector3D &rhs) const
     return Vector3D(x + rhs.x, y + rhs.y, z + rhs.z);
 }
 //==============================================================================
+GFA::Vector3D GFA::Vector3D::operator- (const Vector3D &rhs) const
+{
+    return Vector3D(x - rhs.x, y - rhs.y, z - rhs.z);
+}
+//==============================================================================
 GFA::Vector3D GFA::Vector3D::operator* (const Scalar &rhs) const
 {
     return Vector3D(x * rhs, y * rhs, z * rhs);

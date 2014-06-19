@@ -20,6 +20,7 @@ public:
 
     // mathmatical operators
     Vector3D operator+ (const Vector3D &rhs) const;
+    Vector3D operator- (const Vector3D &rhs) const;
     Vector3D operator* (const Scalar &rhs) const;
     Vector3D operator/ (const Scalar &rhs) const;
     Vector3D operator^ (const Vector3D &rhs) const;     // cross product
