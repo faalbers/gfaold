@@ -1,6 +1,15 @@
 #ifndef GFA_GFA_GLOBAL_H
 #define GFA_GFA_GLOBAL_H
 
+/*! \mainpage GFA Graphic Library
+ *
+ * \section intro_sec Introduction
+ *
+ * This Library contains all the basic elements needed for Computer Graphics
+ * programming.
+ * Still in progress.
+ */
+
 #include <QtCore/qglobal.h>
 
 #if defined(GFA_LIBRARY)

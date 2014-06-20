@@ -17,7 +17,9 @@ public:
     Vector3D();
     Vector3D(const Scalar &x_, const Scalar &y_, const Scalar &z_);
 
-    Scalar x, y, z;
+    Scalar x;   //!< x-axis Scalar
+    Scalar y;   //!< y-axis Scalar
+    Scalar z;   //!< z-axis Scalar
 
     void normalize();
 

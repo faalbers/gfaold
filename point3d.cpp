@@ -1,6 +1,9 @@
 #include "point3d.h"
 #include "vector3d.h"
 //==============================================================================
+/*!
+ * Constructor that sets the 3 axis scalars to zero.
+ */
 GFA::Point3D::Point3D() :
     x(0.0),
     y(0.0),
@@ -8,6 +11,13 @@ GFA::Point3D::Point3D() :
 {
 }
 //==============================================================================
+/*!
+ * Constructor that sets the 3 axis scalars.
+ *
+ * \param x_ x-axis scalar
+ * \param y_ y-axis scalar
+ * \param z_ z-axis scalar
+ */
 GFA::Point3D::Point3D(const Scalar &x_, const Scalar &y_, const Scalar &z_) :
     x(x_),
     y(y_),
@@ -15,6 +25,12 @@ GFA::Point3D::Point3D(const Scalar &x_, const Scalar &y_, const Scalar &z_) :
 {
 }
 //==============================================================================
+/*!
+ * Subtract with another Point3D that results into a Vector3D.
+ *
+ * \param rhs   Point3D to subtract with
+ * \return      Vector3D
+ */
 GFA::Vector3D GFA::Point3D::operator-(const Point3D &rhs) const
 {
     Vector3D temp;
@@ -24,6 +40,12 @@ GFA::Vector3D GFA::Point3D::operator-(const Point3D &rhs) const
     return temp;
 }
 //==============================================================================
+/*!
+ * Add a Vector3D that results into a Point3D.
+ *
+ * \param rhs   Vector3D to add with
+ * \return      Point3D
+ */
 GFA::Point3D GFA::Point3D::operator+(const Vector3D& rhs) const
 {
     Point3D temp;
