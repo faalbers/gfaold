@@ -8,6 +8,9 @@ namespace GFA {
 
 /*!
  * \brief The RGBColorBuffer class
+ *
+ * A 2 dimensional pixel buffer. The buffer exists of an array of 4 consecutive
+ * Scalar values. R(Red), G(Green),B(lue) and A(Alpha).
  */
 class GFASHARED_EXPORT RGBColorBuffer
 {

@@ -8,6 +8,11 @@ GFA::RGBColorBuffer::RGBColorBuffer() :
 {
 }
 //==============================================================================
+/*!
+ * Constructor that creates a 2 dimensional pixel buffer based on given x and y
+ * size. The buffer exists of 4 consecutive Scalar values. R(Red), G(Green),
+ * B(lue) and A(Alpha).
+ */
 GFA::RGBColorBuffer::RGBColorBuffer(const Size &width, const Size &height)
     :   width_(width),
         height_(height),
