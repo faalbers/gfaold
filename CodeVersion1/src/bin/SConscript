@@ -1,0 +1,11 @@
+Import('baseEnv')
+
+binEnv = baseEnv.Clone()
+
+prog = binEnv.Program('gfatest', 'main.cpp')
+binEnv.Append(LIBPATH = binEnv['DISTPATH']+'/lib')
+binEnv.Append(CPPPATH = binEnv['DISTPATH']+'/include')
+binEnv.Append(LIBS=['gfa'])
+
+binEnv.Install(binEnv['DISTPATH']+'/bin', prog)
+

@@ -1,0 +1,25 @@
+Import('baseEnv')
+
+libEnv = baseEnv.Clone()
+
+lib_names = Split("""
+    Utils
+    Matrix
+    Tuple
+    Types
+    Vector
+    Point
+    Color
+    Space
+    FrameBuffer
+""")
+
+lib_objs = [name+'.cpp' for name in lib_names]
+lib = libEnv.SharedLibrary('gfa', lib_objs)
+libEnv.Install(libEnv['DISTPATH']+'/lib', lib)
+
+lib_heads = [name+'.h' for name in lib_names]
+lib_heads_install = [libEnv['DISTPATH']+'/include/GFA/'+name for name in lib_heads]
+libEnv.InstallAs(lib_heads_install, lib_heads)
+
+

@@ -1,0 +1,27 @@
+Import('baseEnv')
+
+libEnv = baseEnv.Clone()
+
+if libEnv['PLATFORM'] == 'posix':
+    libEnv.Append(CCFLAGS = ['-fvisibility=hidden'])
+
+lib_names = Split("""
+    GFA
+    Point2D
+    Point3D
+    RGBColor
+    RGBColorBuffer
+    Normal
+    Vector3D
+""")
+
+lib_objs = [name+'.cpp' for name in lib_names]
+lib = libEnv.SharedLibrary('gfa', lib_objs )
+libEnv.Install(libEnv['DISTPATH']+'/lib', lib)
+libEnv.Install(libEnv['DISTPATH']+'/bin', lib[0])
+
+lib_heads = [name+'.h' for name in lib_names]
+lib_heads_install = [libEnv['DISTPATH']+'/include/GFA/'+name for name in lib_heads]
+libEnv.InstallAs(lib_heads_install, lib_heads)
+
+

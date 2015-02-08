@@ -1,0 +1,56 @@
+import os
+
+DEBUG = False
+
+# BASE ENVIRONMENT
+# Environment that is platform agnostic
+baseEnv = Environment()
+
+print baseEnv['PLATFORM']
+
+if baseEnv['PLATFORM'] == 'posix':
+    baseEnv.Append(CCFLAGS = [
+        '-DHAVE_LINUX'
+        #,'-std=c++0x'
+        ,'-std=c++11'
+        ,'-pedantic-errors'
+        ,'-Wall'
+        ,'-Wextra'
+        ,'-Wuninitialized'
+        ])
+    if os.environ['USER'] == 'afrank':
+        baseEnv.Replace(CXX = '/dist/d2sets/fedora-11-x86_64/tools-base-03-python/bin/g++')
+    if DEBUG:
+        baseEnv.Append(CCFLAGS = ['-fno-inline', '-O0', '-g3'])
+    else:
+        baseEnv.Append(CCFLAGS = ['-O'])
+
+if baseEnv['PLATFORM'] == 'win32':
+    baseEnv.Append(ENV = {'PATH' : os.environ['PATH']})
+    baseEnv.Append(ENV = {'LIB' : os.environ.get('LIB')})
+    baseEnv.Append(ENV = {'INCLUDE' : os.environ.get('INCLUDE')})
+    baseEnv.Append(CCFLAGS = [
+        '-DHAVE_WINDOWS'
+        ,'/W4'
+        #,'/Wall'
+        #,'/WX'
+        #,'/Za'
+        ,'/EHsc'
+        ])
+
+if baseEnv['PLATFORM'] == 'darwin':
+    baseEnv.Append(CCFLAGS = [
+        '-DHAVE_OSX'])
+
+# DIST SCTRUCTURE
+if DEBUG:
+    baseEnv['BUILDKIND'] = 'debug'
+else:
+    baseEnv['BUILDKIND'] = 'opt'
+distPath = '#/inst/%s/%s' % (baseEnv['PLATFORM'], baseEnv['BUILDKIND'])
+baseEnv['DISTPATH'] = distPath
+
+Export('baseEnv')
+
+SConscript('SConscript')
+
